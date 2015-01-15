@@ -10,3 +10,14 @@ Changes over original version ( *rdf3x* ):
 
 RDF-3X was created by: Thomas Neumann. Web site: http://www.mpi-inf.mpg.de/~neumann/rdf3x (c) 2008 
 RDF-3X was modified by: Hancel Gonzalez and Giuseppe De Simone (Advisor: Maria Esther Vidal). http://github.com/gh-rdf3x/gh-rdf3x (c) 2013
+
+Getting started
+---------------
+
+Install `g++` and run:
+
+```
+make
+```
+
+The generated `bin` directory will contain the executables.
