@@ -1,8 +1,12 @@
 PREFIX base: <http://www.semanticweb.org/ontologies/2011/1/TrainRequirementOntology.owl#>
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT DISTINCT ?xSwitch
-WHERE
-{
-	?xSwitch rdf:type base:Switch .
+SELECT DISTINCT ?xSwitch WHERE {
+    ?xSwitch rdf:type base:Switch .
+	OPTIONAL { 
+           ?xSwitch rdf:type base:Switch .
+           ?xSensor rdf:type base:Sensor .
+           ?xSwitch <http://www.semanticweb.org/ontologies/2011/1/TrainRequirementOntology.owl#TrackElement_sensor> ?xSensor .
+           } .
+  	FILTER (!bound(?xSensor))
 }
