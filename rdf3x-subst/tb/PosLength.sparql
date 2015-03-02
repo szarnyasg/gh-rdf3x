@@ -1,0 +1,8 @@
+SELECT DISTINCT ?xSegment
+WHERE
+{
+	?xSegment <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/ontologies/2011/1/TrainRequirementOntology.owl#Segment> .
+	?xSegment <http://www.semanticweb.org/ontologies/2011/1/TrainRequirementOntology.owl#Segment_length> ?xSegmentlength .
+
+	FILTER (?xSegmentlength <= 0)
+}
